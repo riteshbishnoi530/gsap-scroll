@@ -35,7 +35,7 @@ const GsapScroll = () => {
             <div className="parent pt-5 px-4">
                 <div className="relative max-w-[1140px] mx-auto">
 
-                    <div className='absolute gap-4 image-one flex items-center'>
+                    <div className='absolute max-md:flex-col gap-4 image-one flex items-center'>
                         <div className='max-w-[519px] min-h-[674px] w-full bg-[#6FFFA8] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Real Time Tax" headingClass="!text-black" />
                             <Description descriptionClass="!text-black !mt-[26px]" customDescription="Our app will give you your live tax position which will be the actual tax amount owed across multiple income streams, to date. There will be no need to wait until the end of the year to see what you owe, taking all of the anxiety of the unknown away"/>
@@ -50,7 +50,7 @@ const GsapScroll = () => {
                             <Image width={604} height={675} src="/assets/images/image-one.png" alt='image one'/>
                         </div>
                     </div>
-                    <div className='absolute gap-4 items-center scale-0 image-two flex'>
+                    <div className='absolute max-md:flex-col gap-4 items-center scale-0 image-two flex'>
                         <div className='max-w-[519px] min-h-[674px] w-full bg-[#6621E9] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Multiple Incomes in one place" />
                             <Description descriptionClass="!mt-[26px]" customDescription="Importing income and outgoings across multiple income streams is currently not possible on any other software, and our app will automatically highlight expenses eligible for a refund."/>
@@ -66,7 +66,7 @@ const GsapScroll = () => {
                             <Image width={604} height={675} src="/assets/images/image-two.png" alt='image one'/>
                         </div>
                     </div>
-                    <div className='absolute items-center gap-4 scale-0 image-three flex'>
+                    <div className='absolute max-md:flex-col items-center gap-4 scale-0 image-three flex'>
                         <div className='max-w-[519px] min-h-[674px] w-full bg-[#FFABC7] rounded-2xl py-4 px-[26px]'>
                             <Heading headingClass="!text-black" heading="Bookkeeping" />
                             <Description descriptionClass="!text-black !mt-[26px]" customDescription="We’ll enable people to reconcile all of their transactions in one place. Our app will import and categorise bank feeds to determine which of the expenses qualify. That means less time spent worrying about tax rules and more time spent doing the things they enjoy."/>
