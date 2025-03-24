@@ -14,7 +14,7 @@ const GsapScroll = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".parent",
-                start: 'top top',
+                start: 'top 10%',
                 end: '+=800%',
                 pin: true,
                 scrub: 1,
@@ -22,21 +22,22 @@ const GsapScroll = () => {
         });
 
         tl
-            .to(".image-one", { scale: 0, opacity: 0, duration: 0.6 }, 0.5)
-            .to(".image-two", { scale: 1, opacity: 1, duration: 0.6 }, 0.8)
-            .to(".image-two", { scale: 0, opacity: 0, duration: 0.6 }, 1.4)
-            .to(".image-three", { scale: 1, opacity: 1, duration: 0.6 }, 1.4)
-            .to(".image-three", { scale: 0, opacity: 0, duration: 0.6 }, 2)
-            .to(".image-four", { scale: 1, opacity: 1, duration: 0.6 }, 2)
+            .to(".image-one", {opacity: 0, duration: 0.6 }, 0.5)
+            .to(".image-two", {opacity: 1, duration: 0.6 }, 0.8)
+            .to(".image-two", {opacity: 0, duration: 0.6 }, 1.4)
+            .to(".image-three", {opacity: 1, duration: 0.6 }, 1.4)
+            .to(".image-three", { opacity: 0, duration: 0.6 }, 2)
+            .to(".image-four", {opacity: 1, duration: 0.6 }, 2.5)
+            .to(".image-four", {opacity: 1, duration: 0.6 }, 2.8)
     }, []);
 
     return (
-        <section className="min-h-screen overflow-hidden">
+        <section className="xl:min-h-screen overflow-hidden">
             <div className="parent pt-5 px-4">
                 <div className="relative max-w-[1140px] mx-auto">
 
-                    <div className='absolute max-md:flex-col gap-4 image-one flex items-center'>
-                        <div className='max-w-[519px] min-h-[674px] w-full bg-[#6FFFA8] rounded-2xl py-4 px-[26px]'>
+                    <div className='absolute max-xl:flex-col gap-4 image-one flex items-center justify-center'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[674px] w-full bg-[#6FFFA8] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Real Time Tax" headingClass="!text-black" />
                             <Description descriptionClass="!text-black !mt-[26px]" customDescription="Our app will give you your live tax position which will be the actual tax amount owed across multiple income streams, to date. There will be no need to wait until the end of the year to see what you owe, taking all of the anxiety of the unknown away"/>
                             <Description descriptionClass="!text-black mt-2" customDescription="All incoming and outgoing transactions will be updated in real time, along with any deductions or credits, which means users will have the most up to date figure every time they open the app."/>
@@ -47,11 +48,11 @@ const GsapScroll = () => {
 
                         </div>
                         <div>
-                            <Image width={604} height={675} src="/assets/images/image-one.png" alt='image one'/>
+                            <Image className='max-w-[604px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-one.png" alt='image one'/>
                         </div>
                     </div>
-                    <div className='absolute max-md:flex-col gap-4 items-center scale-0 image-two flex'>
-                        <div className='max-w-[519px] min-h-[674px] w-full bg-[#6621E9] rounded-2xl py-4 px-[26px]'>
+                    <div className='absolute max-xl:flex-col gap-4 items-center opacity-0 image-two flex'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[737px] w-full bg-[#6621E9] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Multiple Incomes in one place" />
                             <Description descriptionClass="!mt-[26px]" customDescription="Importing income and outgoings across multiple income streams is currently not possible on any other software, and our app will automatically highlight expenses eligible for a refund."/>
                             <Description descriptionClass="!mt-2" customDescription="Multiple incomes can include anything from salary, property, capital gains, self employment, overseas income, dividends & interest or tax credits."/>
@@ -62,12 +63,12 @@ const GsapScroll = () => {
                             <Description descriptionClass="!mt-2" customDescription="We’ll show the tax breakdown per income type and our app will even calculate an overall aggregated tax calculation"/>
 
                         </div>
-                        <div>
-                            <Image width={604} height={675} src="/assets/images/image-two.png" alt='image one'/>
+                        <div className='max-w-[604px] max-xl:max-w-full'>
+                            <Image className='w-full' width={604} height={675} src="/assets/images/image-two.png" alt='image one'/>
                         </div>
                     </div>
-                    <div className='absolute max-md:flex-col items-center gap-4 scale-0 image-three flex'>
-                        <div className='max-w-[519px] min-h-[674px] w-full bg-[#FFABC7] rounded-2xl py-4 px-[26px]'>
+                    <div className='absolute max-md:flex-col items-center opacity-0 gap-4 image-three flex'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[735px] w-full bg-[#FFABC7] rounded-2xl py-4 px-[26px]'>
                             <Heading headingClass="!text-black" heading="Bookkeeping" />
                             <Description descriptionClass="!text-black !mt-[26px]" customDescription="We’ll enable people to reconcile all of their transactions in one place. Our app will import and categorise bank feeds to determine which of the expenses qualify. That means less time spent worrying about tax rules and more time spent doing the things they enjoy."/>
                             <Description descriptionClass="!text-black !mt-2" customDescription="Our banking level secure encryption cloud storage, will store expense receipts in order to ensure that the tax return is fully compliant in case of any HMRC enquiries."/>
@@ -79,11 +80,11 @@ const GsapScroll = () => {
 
                         </div>
                         <div>
-                            <Image width={604} height={675} src="/assets/images/image-three.png" alt='image one'/>
+                            <Image className='max-w-[604px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-three.png" alt='image one'/>
                         </div>
                     </div>
-                    <div className='absolute items-center max-md:flex-col scale-0 image-four gap-4 flex'>
-                        <div className='max-w-[519px] min-h-[674px] w-full bg-[#026070] rounded-2xl py-4 px-[26px]'>
+                    <div className='absolute items-center opacity-0 max-xl:flex-col image-four gap-4 flex'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[736px] w-full bg-[#026070] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Real Time Tax" />
                             <Description customDescription="Our app will give you your live tax position which will be the actual tax amount owed across multiple income streams, to date. There will be no need to wait until the end of the year to see what you owe, taking all of the anxiety of the unknown away"/>
                             <Description customDescription="Our app will give you your live tax position which will be the actual tax amount owed across multiple income streams, to date. There will be no need to wait until the end of the year to see what you owe, taking all of the anxiety of the unknown away"/>
@@ -94,7 +95,7 @@ const GsapScroll = () => {
 
                         </div>
                         <div>
-                            <Image className='max-w-[604px] w-full' width={604} height={675} src="/assets/images/image-four.png" alt='image one'/>
+                            <Image className='max-w-[604px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-four.png" alt='image one'/>
                         </div>
                     </div>
                 </div>
