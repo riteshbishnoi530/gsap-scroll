@@ -14,7 +14,7 @@ const GsapScroll = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".parent",
-                start: 'top 10%',
+                start: 'top top',
                 end: '+=800%',
                 pin: true,
                 scrub: 1,
@@ -27,8 +27,8 @@ const GsapScroll = () => {
             .to(".image-two", {opacity: 0, duration: 0.6 }, 1.4)
             .to(".image-three", {opacity: 1, duration: 0.6 }, 1.4)
             .to(".image-three", { opacity: 0, duration: 0.6 }, 2)
-            .to(".image-four", {opacity: 1, duration: 0.6 }, 2.5)
-            .to(".image-four", {opacity: 1, duration: 0.6 }, 2.8)
+            .to(".image-four", {opacity: 1, duration: 0.6 }, 3)
+            .to(".image-four", {opacity: 1, duration: 0.6 }, 3.8)
     }, []);
 
     return (
@@ -52,23 +52,21 @@ const GsapScroll = () => {
                         </div>
                     </div>
                     <div className='absolute max-xl:flex-col gap-4 items-center opacity-0 image-two flex'>
-                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[737px] w-full bg-[#6621E9] rounded-2xl py-4 px-[26px]'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[670px] w-full bg-[#6621E9] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Multiple Incomes in one place" />
                             <Description descriptionClass="!mt-[26px]" customDescription="Importing income and outgoings across multiple income streams is currently not possible on any other software, and our app will automatically highlight expenses eligible for a refund."/>
                             <Description descriptionClass="!mt-2" customDescription="Multiple incomes can include anything from salary, property, capital gains, self employment, overseas income, dividends & interest or tax credits."/>
                             <Description descriptionClass="!mt-2" customDescription="We’ll show the tax breakdown per income type and our app will even calculate an overall aggregated tax calculation."/>
                             <Heading headingClass="!mt-[26px]" heading="Live tracking of the tax return" />
                             <Description descriptionClass="!mt-[26px]" customDescription="Users on the premium subscription tier will be paired with a tax advisor to help them with the entire process. Our experts will help plan their business and taxes to make sure they stay as tax efficient as possible. We will use our expertise to either save them money on their tax bill or get the best possible tax rebate so that they can keep more money in their pockets."/>
-                            <Description descriptionClass="!mt-2" customDescription="Our in-app function will enable them to ask questions and get real time answers on any tax issues they may be facing, with sector specific tax assistants on hand to provide valuable insight around the relevant tax situation."/>
-                            <Description descriptionClass="!mt-2" customDescription="We’ll show the tax breakdown per income type and our app will even calculate an overall aggregated tax calculation"/>
 
                         </div>
-                        <div className='max-w-[604px] max-xl:max-w-full'>
+                        <div className='max-w-[550px] h-full max-xl:max-w-full'>
                             <Image className='w-full' width={604} height={675} src="/assets/images/image-two.png" alt='image one'/>
                         </div>
                     </div>
-                    <div className='absolute max-md:flex-col items-center opacity-0 gap-4 image-three flex'>
-                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[735px] w-full bg-[#FFABC7] rounded-2xl py-4 px-[26px]'>
+                    <div className='absolute max-xl:flex-col items-center opacity-0 gap-4 image-three flex'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[670px] w-full bg-[#FFABC7] rounded-2xl py-4 px-[26px]'>
                             <Heading headingClass="!text-black" heading="Bookkeeping" />
                             <Description descriptionClass="!text-black !mt-[26px]" customDescription="We’ll enable people to reconcile all of their transactions in one place. Our app will import and categorise bank feeds to determine which of the expenses qualify. That means less time spent worrying about tax rules and more time spent doing the things they enjoy."/>
                             <Description descriptionClass="!text-black !mt-2" customDescription="Our banking level secure encryption cloud storage, will store expense receipts in order to ensure that the tax return is fully compliant in case of any HMRC enquiries."/>
@@ -76,15 +74,14 @@ const GsapScroll = () => {
                             <Description descriptionClass="!text-black !mt-[26px]" customDescription="All of the income and outgoings will be tracked so that the self assessment income reporting can be completed in the app."/>
                             <Description descriptionClass="!text-black !mt-2" customDescription="Because Pie is a registered tax agent with HMRC, it will be able to send off your self-assessments directly to HMRC without needing to leave or download the data outside of the app."/>
                             
-                            <Description descriptionClass="!text-black !mt-2" customDescription="Users will also have the option to pay a £59 checking fee to have their return reviewed and checked by tax assistants, that will have been trained and certified by our in house CIMA qualified accountancy practice."/>
 
                         </div>
                         <div>
-                            <Image className='max-w-[604px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-three.png" alt='image one'/>
+                            <Image className='max-w-[550px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-three.png" alt='image one'/>
                         </div>
                     </div>
                     <div className='absolute items-center opacity-0 max-xl:flex-col image-four gap-4 flex'>
-                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[736px] w-full bg-[#026070] rounded-2xl py-4 px-[26px]'>
+                        <div className='max-w-[519px] max-xl:max-w-full xl:min-h-[60px] w-full bg-[#026070] rounded-2xl py-4 px-[26px]'>
                             <Heading heading="Real Time Tax" />
                             <Description customDescription="Our app will give you your live tax position which will be the actual tax amount owed across multiple income streams, to date. There will be no need to wait until the end of the year to see what you owe, taking all of the anxiety of the unknown away"/>
                             <Description customDescription="Our app will give you your live tax position which will be the actual tax amount owed across multiple income streams, to date. There will be no need to wait until the end of the year to see what you owe, taking all of the anxiety of the unknown away"/>
@@ -95,7 +92,7 @@ const GsapScroll = () => {
 
                         </div>
                         <div>
-                            <Image className='max-w-[604px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-four.png" alt='image one'/>
+                            <Image className='max-w-[550px] max-xl:max-w-full w-full' width={604} height={675} src="/assets/images/image-four.png" alt='image one'/>
                         </div>
                     </div>
                 </div>
